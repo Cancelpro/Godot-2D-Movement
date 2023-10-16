@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6kwg34ptu1xb"]
+
+[ext_resource type="Texture2D" uid="uid://cepivysuwvclf" path="res://art/greenguy.png" id="1_omyax"]
+[ext_resource type="Script" path="res://player.cs" id="1_yd3kt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_araaw"]
+size = Vector2(60, 156)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_yd3kt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("1_omyax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_araaw")

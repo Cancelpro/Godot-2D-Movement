@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2hdb283bdpet"]
+
+[ext_resource type="Texture2D" uid="uid://borqqmraqugdw" path="res://art/tilesetOpenGameBackground.png" id="1_kwiav"]
+[ext_resource type="PackedScene" uid="uid://c6kwg34ptu1xb" path="res://player.tscn" id="1_x4c5d"]
+[ext_resource type="PackedScene" uid="uid://gmwvq0yyo3mp" path="res://map.tscn" id="2_4ke28"]
+
+[node name="main" type="Node2D"]
+
+[node name="TilesetOpenGameBackground" type="Sprite2D" parent="."]
+position = Vector2(575.645, 317.676)
+scale = Vector2(-3.59295, -2.46564)
+texture = ExtResource("1_kwiav")
+
+[node name="map" parent="." instance=ExtResource("2_4ke28")]
+position = Vector2(670, 562)
+scale = Vector2(2, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_x4c5d")]
+position = Vector2(332, 171)
